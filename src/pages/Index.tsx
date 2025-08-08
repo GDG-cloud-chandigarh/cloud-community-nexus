@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Cloud, Cpu, GitBranch, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Index = () => {
   return (
@@ -66,6 +67,157 @@ const Index = () => {
           ))}
         </div>
       </section>
+      {/* About */}
+      <section id="about" className="container pb-20 animate-fade-in">
+        <header className="mb-6">
+          <h2 className="font-display text-2xl md:text-3xl">About Cloud Community Days</h2>
+          <p className="text-muted-foreground mt-2 max-w-prose">
+            Cloud Community Days is a community-first conference celebrating cloud computing, DevOps, and AI/ML — built by developers, for developers.
+          </p>
+        </header>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="hover-scale">
+            <CardHeader>
+              <CardTitle>Mission</CardTitle>
+              <CardDescription>Learn, share, and build together</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground">
+              We bring practitioners and leaders together to explore real-world cloud architectures, hands-on demos, and the future of AI-enhanced engineering.
+            </CardContent>
+          </Card>
+          <Card className="hover-scale">
+            <CardHeader>
+              <CardTitle>Who should attend?</CardTitle>
+              <CardDescription>Engineers • DevOps • Data/AI • Students</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground">
+              Whether you’re shipping to prod daily or getting started with cloud-native, you’ll find tracks, labs, and mentors to level up.
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Agenda Preview */}
+      <section id="agenda" className="container pb-20 animate-fade-in">
+        <header className="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Agenda Highlights</h2>
+            <p className="text-muted-foreground mt-2">A full day of keynotes, breakouts, and hands-on labs.</p>
+          </div>
+          <Button asChild variant="outline"><Link to="/agenda">View full agenda</Link></Button>
+        </header>
+        <div className="grid gap-4 md:grid-cols-3">
+          {[{t:'09:30', s:'Opening Keynote', d:'Cloud, DevOps, AI — what’s next'}, {t:'11:00', s:'Kubernetes at Scale', d:'Production patterns and pitfalls'}, {t:'14:00', s:'MLOps in Practice', d:'From notebooks to serving'}].map(i => (
+            <Card key={i.s} className="hover-scale">
+              <CardHeader>
+                <CardTitle className="text-xl">{i.s}</CardTitle>
+                <CardDescription>{i.t} • {i.d}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Speakers Preview */}
+      <section id="speakers" className="container pb-20 animate-fade-in">
+        <header className="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Featured Speakers</h2>
+            <p className="text-muted-foreground mt-2">Leaders and builders from the cloud and AI community.</p>
+          </div>
+          <Button asChild variant="outline"><Link to="/speakers">Meet all speakers</Link></Button>
+        </header>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[1,2,3,4].map((n) => (
+            <Card key={n} className="hover-scale overflow-hidden">
+              <div className="aspect-[4/3] bg-muted">
+                <img src="/placeholder.svg" alt="Cloud Community Days speaker" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg">Speaker {n}</CardTitle>
+                <CardDescription>Role • Company</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Sponsors */}
+      <section id="sponsors" className="container pb-20 animate-fade-in">
+        <header className="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Sponsors & Partners</h2>
+            <p className="text-muted-foreground mt-2">Thanks to our amazing partners supporting the community.</p>
+          </div>
+          <Button asChild variant="outline"><Link to="/sponsors">Become a sponsor</Link></Button>
+        </header>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center">
+          {[...Array(10)].map((_,i) => (
+            <div key={i} className="p-4 rounded-xl border bg-card flex items-center justify-center h-20 hover-scale">
+              <img src="/placeholder.svg" alt="Cloud Community Days sponsor logo" loading="lazy" className="h-10 w-auto opacity-70" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Venue Preview */}
+      <section id="venue" className="container pb-20 animate-fade-in">
+        <header className="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Venue</h2>
+            <p className="text-muted-foreground mt-2">Join us in Chandigarh • Sep 2025</p>
+          </div>
+          <Button asChild variant="outline"><Link to="/venue">View venue & map</Link></Button>
+        </header>
+        <article className="rounded-xl border bg-card overflow-hidden">
+          <div className="aspect-[16/9] bg-gradient-to-br from-[hsl(var(--brand-blue))]/15 via-[hsl(var(--brand-green))]/15 to-[hsl(var(--brand-yellow))]/15" />
+        </article>
+      </section>
+
+      {/* Register CTA */}
+      <section id="register" className="container pb-20 animate-fade-in">
+        <div className="rounded-2xl border bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Ready to join Cloud Community Days?</h2>
+            <p className="text-muted-foreground mt-2">Limited seats. Save your spot today.</p>
+          </div>
+          <div className="flex gap-3">
+            <Button asChild size="lg" variant="hero"><a href="/register">Register Now</a></Button>
+            <Button asChild size="lg" variant="outline"><Link to="/about">Why attend?</Link></Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section id="gallery" className="container pb-20 animate-fade-in">
+        <header className="mb-6 flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl">Gallery</h2>
+            <p className="text-muted-foreground mt-2">Moments from past community events.</p>
+          </div>
+          <Button asChild variant="outline"><Link to="/gallery">See more</Link></Button>
+        </header>
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {[1,2,3,4,5,6].map((n) => (
+            <div key={n} className="rounded-xl overflow-hidden border bg-card hover-scale">
+              <img src="/placeholder.svg" alt="Cloud Community Days gallery image" loading="lazy" className="w-full h-48 object-cover" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="container pb-24 animate-fade-in">
+        <header className="mb-6">
+          <h2 className="font-display text-2xl md:text-3xl">Contact Us</h2>
+          <p className="text-muted-foreground mt-2 max-w-prose">Have questions about tickets, speaking, or sponsorships? We’d love to help.</p>
+        </header>
+        <div className="flex flex-wrap gap-3">
+          <Button asChild variant="outline"><Link to="/contact">Get in touch</Link></Button>
+          <Button asChild variant="ghost"><a href="#sponsors" className="story-link">Sponsorship</a></Button>
+        </div>
+      </section>
+
     </div>
   );
 };
