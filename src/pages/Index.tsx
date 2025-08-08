@@ -42,9 +42,15 @@ const Index = () => {
               <div className="flex items-center gap-2"><Rocket /><span>Launchpad</span></div>
             </div>
           </div>
-          <div className="relative h-72 md:h-[420px] rounded-2xl border bg-gradient-to-br from-[hsl(var(--brand-blue))]/15 via-[hsl(var(--brand-green))]/15 to-[hsl(var(--brand-yellow))]/15 shadow-soft animate-scale-in">
-            <div className="absolute inset-0 rounded-2xl" style={{background:"var(--gradient-hero)" as any, opacity:0.15}} />
-            <div className="absolute inset-0" aria-hidden>
+          <div className="relative h-72 md:h-[420px] rounded-2xl border overflow-hidden bg-gradient-to-br from-[hsl(var(--brand-blue))]/15 via-[hsl(var(--brand-green))]/15 to-[hsl(var(--brand-yellow))]/15 shadow-soft">
+            <img
+              src="/lovable-uploads/291e325e-c1d3-4076-8418-32eb97bc803c.png"
+              alt="Audience at Cloud Community Days in Chandigarh"
+              className="absolute inset-0 w-full h-full object-cover animate-enter"
+              decoding="async"
+            />
+            <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{background:"var(--gradient-hero)" as any, opacity:0.25}} />
+            <div className="absolute inset-0 pointer-events-none" aria-hidden>
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-blue))] opacity-20 blur-2xl absolute -top-10 -left-10" />
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-green))] opacity-20 blur-2xl absolute bottom-0 right-10" />
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-yellow))] opacity-20 blur-2xl absolute top-10 right-0" />
@@ -131,7 +137,7 @@ const Index = () => {
           {[1,2,3,4].map((n) => (
             <Card key={n} className="hover-scale overflow-hidden">
               <div className="aspect-[4/3] bg-muted">
-                <img src="/placeholder.svg" alt="Cloud Community Days speaker" loading="lazy" className="w-full h-full object-cover" />
+                <img src="/placeholder.svg" alt="Cloud Community Days speaker portrait" loading="lazy" className="w-full h-full object-cover animate-enter" />
               </div>
               <CardHeader>
                 <CardTitle className="text-lg">Speaker {n}</CardTitle>
@@ -154,7 +160,7 @@ const Index = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center">
           {[...Array(10)].map((_,i) => (
             <div key={i} className="p-4 rounded-xl border bg-card flex items-center justify-center h-20 hover-scale">
-              <img src="/placeholder.svg" alt="Cloud Community Days sponsor logo" loading="lazy" className="h-10 w-auto opacity-70" />
+              <img src="/placeholder.svg" alt="Cloud Community Days sponsor logo" loading="lazy" className="h-10 w-auto opacity-70 animate-enter" />
             </div>
           ))}
         </div>
@@ -200,7 +206,7 @@ const Index = () => {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {[1,2,3,4,5,6].map((n) => (
             <div key={n} className="rounded-xl overflow-hidden border bg-card hover-scale">
-              <img src="/placeholder.svg" alt="Cloud Community Days gallery image" loading="lazy" className="w-full h-48 object-cover" />
+              <img src="/placeholder.svg" alt="Cloud Community Days gallery image" loading="lazy" className="w-full h-48 object-cover animate-enter" />
             </div>
           ))}
         </div>
