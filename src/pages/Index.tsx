@@ -44,7 +44,7 @@ const Index = () => {
           </div>
           <div className="relative h-72 md:h-[420px] overflow-hidden">
             <img
-              src="/lovable-uploads/291e325e-c1d3-4076-8418-32eb97bc803c.png"
+              src="/images/hero-section.png"
               alt="Audience at Cloud Community Days in Chandigarh"
               className="absolute inset-0 w-full h-full object-contain animate-enter"
               decoding="async"
@@ -210,9 +210,18 @@ const Index = () => {
           <Button asChild variant="outline"><Link to="/gallery">See more</Link></Button>
         </header>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {[1,2,3,4,5,6].map((n) => (
-            <div key={n} className="rounded-xl overflow-hidden border bg-card hover-scale">
-              <img src="/placeholder.svg" alt="Cloud Community Days gallery image" loading="lazy" className="w-full h-48 object-cover animate-enter" />
+          {[
+            "/images/devfest1.jpg",
+            "/images/io1.png",
+            "/images/ccd1.jpg",
+          ].map((src, i) => (
+            <div key={i} className="rounded-xl overflow-hidden border bg-card hover-scale">
+              <img
+                src={src}
+                alt={`Cloud Community Days gallery image ${i + 1}`}
+                loading="lazy"
+                className="w-full h-48 object-cover animate-enter"
+              />
             </div>
           ))}
         </div>
