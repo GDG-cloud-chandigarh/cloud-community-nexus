@@ -166,17 +166,23 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Venue Preview */}
-      <section id="venue" className="container pb-20 animate-fade-in">
+      {/* Location */}
+      <section id="location" className="container pb-20 animate-fade-in">
         <header className="mb-6 flex items-end justify-between gap-4">
           <div>
-            <h2 className="font-display text-2xl md:text-3xl">Venue</h2>
-            <p className="text-muted-foreground mt-2">Join us in Chandigarh • Sep 2025</p>
+            <h2 className="font-display text-2xl md:text-3xl">Location — CGC Jhanjeri</h2>
+            <p className="text-muted-foreground mt-2">Mohali, Punjab • Interactive map</p>
           </div>
-          <Button asChild variant="outline"><Link to="/venue">View venue & map</Link></Button>
+          <Button asChild variant="outline"><Link to="/venue">Open full map</Link></Button>
         </header>
-        <article className="rounded-xl border bg-card overflow-hidden">
-          <div className="aspect-[16/9] bg-gradient-to-br from-[hsl(var(--brand-blue))]/15 via-[hsl(var(--brand-green))]/15 to-[hsl(var(--brand-yellow))]/15" />
+        <article className="rounded-xl border bg-card overflow-hidden shadow-soft">
+          <iframe
+            title="CGC Jhanjeri on Google Maps"
+            src="https://www.google.com/maps?q=CGC%20Jhanjeri&z=15&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full aspect-[16/9]"
+          />
         </article>
       </section>
 
