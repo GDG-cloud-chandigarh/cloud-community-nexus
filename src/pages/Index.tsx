@@ -18,23 +18,23 @@ const Index = () => {
           <div className="space-y-6 animate-fade-in">
             <img src="/images/ccd-logo.png" alt="Cloud Community Days 2025 Logo" className="w-full max-w-xs md:max-w-md" style={{ height: "auto" }} />
             <p className="text-lg text-muted-foreground max-w-prose">
-              The biggest, most exciting cloud community event of the year —
+              The biggest, most exciting cloud community event of the year -
               focused on Cloud, DevOps, AI/ML, and developer networking.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground">Chandigarh • Sep 2025</span>
-              <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground">In‑person</span>
+              <span className="px-5 py-2 rounded-full bg-black text-white">Chandigarh • Sep 2025</span>
+              <span className="px-5 py-2 rounded-full bg-black text-white">In-person</span>
             </div>
             <div className="flex items-center gap-3">
               <a
                 href="/register"
-                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white"
+                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 Register Now
               </a>
               <Link
                 to="/agenda"
-                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white"
+                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 View Agenda
               </Link>
@@ -64,7 +64,7 @@ const Index = () => {
             { title: 'Hands-on Labs', desc: 'Ship faster with guided labs on Kubernetes, serverless, and MLOps.' },
             { title: 'Networking', desc: 'Connect with builders, founders, and recruiters at Community Night.' },
           ].map((c) => (
-            <article key={c.title} className="p-6 border bg-card shadow-soft animate-fade-in bg-white border-black border-t-4 border-r-4 font-medium">
+            <article key={c.title} className="p-6 border bg-card shadow-soft animate-fade-in bg-white border-black border-t-4 border-r-4 font-medium bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10">
               <h3 className="font-medium text-lg">{c.title}</h3>
               <p className="text-muted-foreground mt-2">{c.desc}</p>
             </article>
@@ -179,21 +179,21 @@ const Index = () => {
             src="https://www.google.com/maps?q=CGC%20Jhanjeri&z=15&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full aspect-[16/9]"
+            className="w-full aspect-[16/4]"
           />
         </article>
       </section>
 
       {/* Register CTA */}
       <section id="register" className="container pb-20 animate-fade-in">
-        <div className="rounded-2xl border bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="border-2 bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-black bg-white border-black border-t-4 border-r-4 font-medium ">
           <div>
             <h2 className="font-display text-2xl md:text-3xl">Ready to join Cloud Community Days?</h2>
             <p className="text-muted-foreground mt-2">Limited seats. Save your spot today.</p>
           </div>
           <div className="flex gap-3">
-            <Button asChild size="lg" variant="hero"><a href="/register">Register Now</a></Button>
-            <Button asChild size="lg" variant="outline"><Link to="/about">Why attend?</Link></Button>
+            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"><a href="/register">Register Now</a></Button>
+            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"><Link to="/about">Why attend?</Link></Button>
           </div>
         </div>
       </section>
@@ -239,13 +239,13 @@ const Index = () => {
             <div className="flex flex-wrap gap-3">
               <Link
                 to="/contact"
-                className="w-28 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"
+                className="w-32 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 Get in touch
               </Link>
               <a
                 href="#sponsors"
-                className="w-28 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white story-link"
+                className="w-32 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white story-link bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 Sponsorship
               </a>

@@ -22,9 +22,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
       <nav className="container flex items-center justify-between h-16">
-        <NavLink to="/" className="flex items-center gap-2 font-display text-lg">
-          <span className="inline-flex h-6 w-6 rounded-md bg-gradient-to-br from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-green))] to-[hsl(var(--brand-yellow))]" aria-hidden />
-          Cloud Community Days
+        <NavLink
+          to="/"
+          className="flex items-center gap-2 font-display text-lg"
+        >
+          <img
+            src="/images/gdgcloudchd.png"
+            alt="Google Developer Groups Cloud Chandigarh"
+            className="h-auto w-auto"
+            style={{ maxWidth: "180px" }}
+          />
         </NavLink>
 
         <div className="hidden md:flex items-center gap-1">
