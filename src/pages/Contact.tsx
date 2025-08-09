@@ -1,29 +1,105 @@
 import { Helmet } from "react-helmet-async";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
+import { useRef } from "react";
+
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    toast({ title: 'Message sent', description: 'We will be in touch shortly!' });
-    (e.currentTarget as HTMLFormElement).reset();
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast({ title: "Message sent", description: "We will be in touch shortly!" });
+          formRef.current?.reset();
+        },
+        () => {
+          toast({ title: "Error", description: "Failed to send message. Please try again." });
+        }
+      );
   }
 
   return (
-    <section className="container py-16">
-      <Helmet>
-        <title>Contact • Cloud Community Days</title>
-        <meta name="description" content="Contact the Cloud Community Days team for partnerships, volunteering, and general queries." />
-        <link rel="canonical" href="/contact" />
-      </Helmet>
-      <h1 className="font-display text-4xl mb-6">Contact Us</h1>
-      <form className="grid gap-4 max-w-xl" onSubmit={onSubmit}>
-        <input className="border rounded-md px-3 py-2 bg-background" placeholder="Your name" required />
-        <input className="border rounded-md px-3 py-2 bg-background" type="email" placeholder="Email" required />
-        <textarea className="border rounded-md px-3 py-2 bg-background min-h-32" placeholder="Message" required />
-        <button className="h-11 px-6 rounded-md bg-primary text-primary-foreground hover:bg-primary/90">Send</button>
-      </form>
-    </section>
+    <>
+      <img
+        src="/images/header.png"
+        alt="Cloud Community Days 2025 Logo"
+        className="w-full mb-6 object-contain"
+      />
+      <section className="container py-16">
+        <Helmet>
+          <title>Contact • Cloud Community Days</title>
+          <meta name="description" content="Contact the Cloud Community Days team for partnerships, volunteering, and general queries." />
+          <link rel="canonical" href="/contact" />
+        </Helmet>
+        <div className="max-w-xl mx-auto bg-card rounded-xl shadow-2xl p-8 border">
+          <h1 className="font-display text-4xl mb-4 text-center">Contact Us</h1>
+          <p className="text-muted-foreground mb-8 text-center">
+            We'd love to hear from you! Fill out the form below and our team will get back to you soon.
+          </p>
+          <form ref={formRef} className="grid gap-6" onSubmit={onSubmit}>
+            <div>
+              <label htmlFor="user_name" className="block mb-2 font-medium text-sm text-primary">
+                Name
+              </label>
+              <input
+                id="user_name"
+                name="user_name"
+                className="border rounded-md px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Your name"
+                required
+                autoComplete="name"
+              />
+            </div>
+            <div>
+              <label htmlFor="user_email" className="block mb-2 font-medium text-sm text-primary">
+                Email
+              </label>
+              <input
+                id="user_email"
+                name="user_email"
+                type="email"
+                className="border rounded-md px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="you@example.com"
+                required
+                autoComplete="email"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block mb-2 font-medium text-sm text-primary">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                className="border rounded-md px-4 py-3 w-full bg-background min-h-32 resize-y focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Type your message here..."
+                required
+              />
+            </div>
+            <button
+              className="h-12 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
   );
 }

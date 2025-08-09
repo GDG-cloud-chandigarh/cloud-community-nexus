@@ -12,27 +12,34 @@ const schedule = [
 
 export default function Agenda() {
   return (
-    <section className="container py-16">
-      <Helmet>
-        <title>Agenda • Cloud Community Days</title>
-        <meta name="description" content="Explore the full Cloud Community Days agenda with talks, labs, and networking." />
-        <link rel="canonical" href="/agenda" />
-      </Helmet>
-      <h1 className="font-display text-4xl mb-8">Agenda</h1>
-      <div className="relative">
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-border" />
-        <ul className="space-y-6">
-          {schedule.map((s) => (
-            <li key={s.time} className="relative pl-10">
-              <span className="absolute left-0 top-2 h-3 w-3 rounded-full bg-[hsl(var(--brand-blue))]" />
-              <div className="p-4 border rounded-lg bg-card shadow-soft">
-                <div className="text-sm text-muted-foreground">{s.time} • {s.track}</div>
-                <div className="font-medium mt-1">{s.title}</div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <>
+      <img
+        src="/images/header.png"
+        alt="Cloud Community Days 2025 Logo"
+        className="w-full mb-6 object-contain"
+      />
+      <section className="container py-16">
+        <Helmet>
+          <title>Agenda • Cloud Community Days</title>
+          <meta name="description" content="Explore the full Cloud Community Days agenda with talks, labs, and networking." />
+          <link rel="canonical" href="/agenda" />
+        </Helmet>
+        <h1 className="font-display text-4xl mb-8">Agenda</h1>
+        <div className="relative">
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-border" />
+          <ul className="space-y-6">
+            {schedule.map((s) => (
+              <li key={s.time} className="relative pl-10">
+                <span className="absolute left-0 top-2 h-3 w-3 rounded-full bg-[hsl(var(--brand-blue))]" />
+                <div className="p-4 border rounded-lg bg-card shadow-soft">
+                  <div className="text-sm text-muted-foreground">{s.time} • {s.track}</div>
+                  <div className="font-medium mt-1">{s.title}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </>
   );
 }

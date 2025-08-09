@@ -13,12 +13,10 @@ const Index = () => {
         <link rel="canonical" href="/" />
       </Helmet>
 
-      <section className="container pt-16 pb-20 md:pt-24 md:pb-28">
+      <section className="container pt-16 pb-20 md:pt-16 md:pb-28">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="font-display text-4xl md:text-6xl leading-tight">
-              Cloud Community Days 2025
-            </h1>
+            <img src="/images/ccd-logo.png" alt="Cloud Community Days 2025 Logo" className="w-full max-w-xs md:max-w-md" style={{ height: "auto" }} />
             <p className="text-lg text-muted-foreground max-w-prose">
               The biggest, most exciting cloud community event of the year —
               focused on Cloud, DevOps, AI/ML, and developer networking.
@@ -49,12 +47,6 @@ const Index = () => {
               className="absolute inset-0 w-full h-full object-contain animate-enter"
               decoding="async"
             />
-            {/* <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{background:"var(--gradient-hero)" as any, opacity:0.25}} />
-            <div className="absolute inset-0 pointer-events-none" aria-hidden>
-              <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-blue))] opacity-20 blur-2xl absolute -top-10 -left-10" />
-              <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-green))] opacity-20 blur-2xl absolute bottom-0 right-10" />
-              <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-yellow))] opacity-20 blur-2xl absolute top-10 right-0" />
-            </div> */}
           </div>
         </div>
       </section>
