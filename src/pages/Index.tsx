@@ -42,19 +42,19 @@ const Index = () => {
               <div className="flex items-center gap-2"><Rocket /><span>Launchpad</span></div>
             </div>
           </div>
-          <div className="relative h-72 md:h-[420px] rounded-2xl border overflow-hidden bg-gradient-to-br from-[hsl(var(--brand-blue))]/15 via-[hsl(var(--brand-green))]/15 to-[hsl(var(--brand-yellow))]/15 shadow-soft">
+          <div className="relative h-72 md:h-[420px] overflow-hidden">
             <img
               src="/lovable-uploads/291e325e-c1d3-4076-8418-32eb97bc803c.png"
               alt="Audience at Cloud Community Days in Chandigarh"
-              className="absolute inset-0 w-full h-full object-cover animate-enter"
+              className="absolute inset-0 w-full h-full object-contain animate-enter"
               decoding="async"
             />
-            <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{background:"var(--gradient-hero)" as any, opacity:0.25}} />
+            {/* <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{background:"var(--gradient-hero)" as any, opacity:0.25}} />
             <div className="absolute inset-0 pointer-events-none" aria-hidden>
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-blue))] opacity-20 blur-2xl absolute -top-10 -left-10" />
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-green))] opacity-20 blur-2xl absolute bottom-0 right-10" />
               <div className="w-40 h-40 rounded-xl bg-[hsl(var(--brand-yellow))] opacity-20 blur-2xl absolute top-10 right-0" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
