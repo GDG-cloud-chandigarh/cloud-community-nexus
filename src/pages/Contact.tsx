@@ -46,53 +46,53 @@ export default function Contact() {
           <meta name="description" content="Contact the Cloud Community Days team for partnerships, volunteering, and general queries." />
           <link rel="canonical" href="/contact" />
         </Helmet>
-        <div className="max-w-xl mx-auto bg-card rounded-xl shadow-2xl p-8 border">
+        <div className="max-w-xl mx-auto bg-card shadow-2xl p-8 border">
           <h1 className="font-display text-4xl mb-4 text-center">Contact Us</h1>
           <p className="text-muted-foreground mb-8 text-center">
             We'd love to hear from you! Fill out the form below and our team will get back to you soon.
           </p>
           <form ref={formRef} className="grid gap-6" onSubmit={onSubmit}>
             <div>
-              <label htmlFor="user_name" className="block mb-2 font-medium text-sm text-primary">
+              <label htmlFor="user_name" className="block mb-2 font-medium text-sm text-black">
                 Name
               </label>
               <input
                 id="user_name"
                 name="user_name"
-                className="border rounded-md px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                className="border px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="Your name"
                 required
                 autoComplete="name"
               />
             </div>
             <div>
-              <label htmlFor="user_email" className="block mb-2 font-medium text-sm text-primary">
+              <label htmlFor="user_email" className="block mb-2 font-medium text-sm text-black">
                 Email
               </label>
               <input
                 id="user_email"
                 name="user_email"
                 type="email"
-                className="border rounded-md px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                className="border px-4 py-3 w-full bg-background focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="you@example.com"
                 required
                 autoComplete="email"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block mb-2 font-medium text-sm text-primary">
+              <label htmlFor="message" className="block mb-2 font-medium text-sm text-black">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
-                className="border rounded-md px-4 py-3 w-full bg-background min-h-32 resize-y focus:outline-none focus:ring-2 focus:ring-primary"
+                className="border px-4 py-3 w-full bg-background min-h-32 resize-y focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="Type your message here..."
                 required
               />
             </div>
             <button
-              className="h-12 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition"
+              className="h-12 px-6 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"
               type="submit"
             >
               Send Message

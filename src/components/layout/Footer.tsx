@@ -2,7 +2,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t">
+    <footer className="border-t">
       <div className="container py-10 grid gap-6 md:grid-cols-2">
         <div>
           <h3 className="font-display text-xl">Cloud Community Days</h3>

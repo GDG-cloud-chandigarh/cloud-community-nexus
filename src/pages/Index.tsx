@@ -26,12 +26,18 @@ const Index = () => {
               <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground">In‑person</span>
             </div>
             <div className="flex items-center gap-3">
-              <Button asChild size="lg" variant="hero">
-                <a href="/register">Register Now</a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/agenda">View Agenda</Link>
-              </Button>
+              <a
+                href="/register"
+                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white"
+              >
+                Register Now
+              </a>
+              <Link
+                to="/agenda"
+                className="w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white"
+              >
+                View Agenda
+              </Link>
             </div>
             <div className="flex gap-6 pt-2 text-muted-foreground">
               <div className="flex items-center gap-2"><Cloud /><span>Cloud</span></div>
@@ -58,7 +64,7 @@ const Index = () => {
             { title: 'Hands-on Labs', desc: 'Ship faster with guided labs on Kubernetes, serverless, and MLOps.' },
             { title: 'Networking', desc: 'Connect with builders, founders, and recruiters at Community Night.' },
           ].map((c) => (
-            <article key={c.title} className="p-6 rounded-xl border bg-card shadow-soft animate-fade-in">
+            <article key={c.title} className="p-6 border bg-card shadow-soft animate-fade-in bg-white border-black border-t-4 border-r-4 font-medium">
               <h3 className="font-medium text-lg">{c.title}</h3>
               <p className="text-muted-foreground mt-2">{c.desc}</p>
             </article>
@@ -221,13 +227,39 @@ const Index = () => {
 
       {/* Contact */}
       <section id="contact" className="container pb-24 animate-fade-in">
-        <header className="mb-6">
-          <h2 className="font-display text-2xl md:text-3xl">Contact Us</h2>
-          <p className="text-muted-foreground mt-2 max-w-prose">Have questions about tickets, speaking, or sponsorships? We’d love to help.</p>
-        </header>
-        <div className="flex flex-wrap gap-3">
-          <Button asChild variant="outline"><Link to="/contact">Get in touch</Link></Button>
-          <Button asChild variant="ghost"><a href="#sponsors" className="story-link">Sponsorship</a></Button>
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          {/* Left: Contact Info */}
+          <div>
+            <header className="mb-6">
+              <h2 className="font-display text-2xl md:text-3xl">Contact Us</h2>
+              <p className="text-muted-foreground mt-2 max-w-prose">
+                Have questions about tickets, speaking, or sponsorships? We’d love to help.
+              </p>
+            </header>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                to="/contact"
+                className="w-28 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"
+              >
+                Get in touch
+              </Link>
+              <a
+                href="#sponsors"
+                className="w-28 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white story-link"
+              >
+                Sponsorship
+              </a>
+            </div>
+          </div>
+          {/* Right: Image */}
+          <div className="flex justify-center">
+            <img
+              src="/images/contactus.png"
+              alt="Cloud Community Days Chandigarh"
+              className="rounded-xl border shadow-soft w-full max-w-md object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
