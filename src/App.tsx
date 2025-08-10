@@ -9,11 +9,9 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import About from "./pages/About";
 import Agenda from "./pages/Agenda";
 import Speakers from "./pages/Speakers";
 import Sponsors from "./pages/Sponsors";
-import Venue from "./pages/Venue";
 import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
@@ -32,11 +30,9 @@ const App = () => (
             <main>
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
                 <Route path="/agenda" element={<Agenda />} />
                 <Route path="/speakers" element={<Speakers />} />
                 <Route path="/sponsors" element={<Sponsors />} />
-                <Route path="/venue" element={<Venue />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />

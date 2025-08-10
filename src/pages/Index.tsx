@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Cloud, Cpu, GitBranch, Rocket } from "lucide-react";
@@ -5,6 +6,29 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Index = () => {
+  // Countdown logic
+  const targetDate = new Date("2025-08-23T00:00:00");
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date();
+      const diff = targetDate.getTime() - now.getTime();
+      if (diff > 0) {
+        setTimeLeft({
+          days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+          mins: Math.floor((diff / (1000 * 60)) % 60),
+          secs: Math.floor((diff / 1000) % 60),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, mins: 0, secs: 0 });
+        clearInterval(timer);
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="bg-grid-subtle">
       <Helmet>
@@ -22,8 +46,8 @@ const Index = () => {
               focused on Cloud, DevOps, AI/ML, and developer networking.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="px-5 py-2 rounded-full bg-black text-white">Chandigarh • Sep 2025</span>
-              <span className="px-5 py-2 rounded-full bg-black text-white">In-person</span>
+              <span className="px-5 py-2 bg-black text-white">Chandigarh • Sep 2025</span>
+              <span className="px-5 py-2 bg-black text-white">In-person</span>
             </div>
             <div className="flex items-center gap-3">
               <a
@@ -57,6 +81,28 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="w-full border-black px-8 py-8 mb-12 flex flex-col items-center justify-center animate-fade-in">
+        <h2 className="font-display text-2xl md:text-5xl mb-4 text-center">Countdown to Cloud Community Days</h2>
+        <div className="flex flex-wrap justify-center gap-20 text-7xl font-bold text-black">
+          <div className="flex flex-col items-center">
+            <span>{timeLeft.days}</span>
+            <span className="text-xs font-normal">Days</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span>{timeLeft.hours}</span>
+            <span className="text-xs font-normal">Hours</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span>{timeLeft.mins}</span>
+            <span className="text-xs font-normal">Minutes</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span>{timeLeft.secs}</span>
+            <span className="text-xs font-normal">Seconds</span>
+          </div>
+        </div>
+      </section>
+      
       <section className="container pb-20">
         <div className="grid gap-6 md:grid-cols-3">
           {[
@@ -120,32 +166,7 @@ const Index = () => {
             </Card>
           ))}
         </div>
-      </section>
-
-      {/* Speakers Preview */}
-      <section id="speakers" className="container pb-20 animate-fade-in">
-        <header className="mb-6 flex items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-2xl md:text-3xl">Featured Speakers</h2>
-            <p className="text-muted-foreground mt-2">Leaders and builders from the cloud and AI community.</p>
-          </div>
-          <Button asChild variant="outline"><Link to="/speakers">Meet all speakers</Link></Button>
-        </header>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[1,2,3,4].map((n) => (
-            <Card key={n} className="hover-scale overflow-hidden">
-              <div className="aspect-[4/3] bg-muted">
-                <img src="/placeholder.svg" alt="Cloud Community Days speaker portrait" loading="lazy" className="w-full h-full object-cover animate-enter" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg">Speaker {n}</CardTitle>
-                <CardDescription>Role • Company</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-      </section>
-
+      </section>  
       {/* Sponsors */}
       <section id="sponsors" className="container pb-20 animate-fade-in">
         <header className="mb-6 flex items-end justify-between gap-4">
@@ -171,7 +192,6 @@ const Index = () => {
             <h2 className="font-display text-2xl md:text-3xl">Location — CGC Jhanjeri</h2>
             <p className="text-muted-foreground mt-2">Mohali, Punjab • Interactive map</p>
           </div>
-          <Button asChild variant="outline"><Link to="/venue">Open full map</Link></Button>
         </header>
         <article className="rounded-xl border bg-card overflow-hidden shadow-soft">
           <iframe
@@ -205,7 +225,7 @@ const Index = () => {
             <h2 className="font-display text-2xl md:text-3xl">Gallery</h2>
             <p className="text-muted-foreground mt-2">Moments from past community events.</p>
           </div>
-          <Button asChild variant="outline"><Link to="/gallery">See more</Link></Button>
+          <Link to="/gallery" className="w-32 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10" >See more</Link>
         </header>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {[
@@ -218,7 +238,7 @@ const Index = () => {
                 src={src}
                 alt={`Cloud Community Days gallery image ${i + 1}`}
                 loading="lazy"
-                className="w-full h-48 object-cover animate-enter"
+                className="w-full object-cover animate-enter"
               />
             </div>
           ))}
@@ -233,7 +253,7 @@ const Index = () => {
             <header className="mb-6">
               <h2 className="font-display text-2xl md:text-3xl">Contact Us</h2>
               <p className="text-muted-foreground mt-2 max-w-prose">
-                Have questions about tickets, speaking, or sponsorships? We’d love to help.
+                Have questions about tickets, speaking, or sponsorships? We'd love to help.
               </p>
             </header>
             <div className="flex flex-wrap gap-3">

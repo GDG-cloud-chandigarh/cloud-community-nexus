@@ -30,7 +30,7 @@ export default function Speakers() {
 					{speakers.map((sp) => (
 						<article
 							key={sp.name}
-							className="p-6 rounded-xl border bg-card shadow-soft text-center"
+							className="p-6 border bg-card shadow-soft text-center items-center justify-center bg-white border-black border-t-4 border-r-4 font-medium"
 						>
 							<Avatar className="mx-auto h-16 w-16">
 								<AvatarFallback>
@@ -44,9 +44,6 @@ export default function Speakers() {
 							<p className="text-sm text-muted-foreground">
 								{sp.title}
 							</p>
-							<div className="mt-3 text-xs text-muted-foreground">
-								LinkedIn • Twitter
-							</div>
 						</article>
 					))}
 				</div>
