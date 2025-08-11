@@ -29,6 +29,13 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const agendaPreview = [
+    { time: "09:00 AM", title: "Reporting Starts" },
+    { time: "12:10 PM", title: "Content Contest", speaker: "GDG Cloud Chandigarh Team", },
+    // { time: "11:20 AM", title: "Dart on Cloud Run for Flutter developers to go full-stack!", speaker: "Aditya Thakur" },
+    { time: "5:00 PM", title: "Closing Remarks" },
+  ];
+
   return (
     <div className="bg-grid-subtle">
       <Helmet>
@@ -129,7 +136,7 @@ const Index = () => {
           </p>
         </header>
         <div className="grid gap-6 md:grid-cols-2">
-          <Card className="w-full bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black">
+          <Card className="w-full bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10">
             <CardHeader>
               <CardTitle>Mission</CardTitle>
               <CardDescription>Learn, share, and build together</CardDescription>
@@ -138,13 +145,13 @@ const Index = () => {
               We bring practitioners and leaders together to explore real-world cloud architectures, hands-on demos, and the future of AI-enhanced engineering.
             </CardContent>
           </Card>
-          <Card className="w-full bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black">
+          <Card className="w-full bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10">
             <CardHeader>
               <CardTitle>Who should attend?</CardTitle>
               <CardDescription>Engineers • DevOps • Data/AI • Students</CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground">
-              Whether you’re shipping to prod daily or getting started with cloud-native, you’ll find tracks, labs, and mentors to level up.
+              Whether you're shipping to prod daily or getting started with cloud-native, you'll find tracks, labs, and mentors to level up.
             </CardContent>
           </Card>
         </div>
@@ -155,18 +162,34 @@ const Index = () => {
         <header className="mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
           <div>
             <h2 className="font-display text-xl md:text-3xl">Agenda Highlights</h2>
-            <p className="text-muted-foreground mt-2 text-sm md:text-base">A full day of keynotes, breakouts, and hands-on labs.</p>
+            <p className="text-muted-foreground mt-2 text-sm md:text-base">
+              Glimpse of the day: keynotes, breakouts, and hands-on labs.
+            </p>
           </div>
-          <Button asChild variant="outline" className="w-full md:w-auto"><Link to="/agenda">View full agenda</Link></Button>
+          <Button asChild variant="outline" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10">
+            <Link to="/agenda">View full agenda</Link>
+          </Button>
         </header>
-        <div className="grid gap-4 md:grid-cols-3">
-          {[{t:'09:30', s:'Opening Keynote', d:'Cloud, DevOps, AI — what’s next'}, {t:'11:00', s:'Kubernetes at Scale', d:'Production patterns and pitfalls'}, {t:'14:00', s:'MLOps in Practice', d:'From notebooks to serving'}].map(i => (
-            <Card key={i.s} className="hover-scale">
-              <CardHeader>
-                <CardTitle className="text-base md:text-xl">{i.s}</CardTitle>
-                <CardDescription className="text-xs md:text-base">{i.t} • {i.d}</CardDescription>
-              </CardHeader>
-            </Card>
+        <div className="grid gap-6 md:grid-cols-3">
+          {agendaPreview.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex items-start gap-4 p-4 border-2 border-black border-t-4 border-r-4 bg-white shadow-lg bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
+            >
+              <div className="flex flex-col items-center justify-center min-w-[70px]">
+                <div className="bg-[hsl(var(--brand-blue))] text-white font-bold px-3 py-1 text-xs md:text-sm shadow">
+                  {item.time}
+                </div>
+              </div>
+              <div>
+                <div className="font-medium text-base md:text-lg">{item.title}</div>
+                {item.speaker && (
+                  <div className="text-xs md:text-sm text-muted-foreground mt-1">
+                    <span className="font-semibold">by</span> {item.speaker}
+                  </div>
+                )}
+              </div>
+            </div>
           ))}
         </div>
       </section>  
