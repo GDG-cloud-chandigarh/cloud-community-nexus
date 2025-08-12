@@ -57,7 +57,7 @@ export default function Header() {
 						variant="outline"
 						className="hidden lg:flex w-24 h-10 items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
 					>
-						<a href="/register">Register</a>
+						<a href="https://allevents.in/mohali/cloud-community-days-chandigarh-tickets/80002086552448">Register</a>
 					</Button>
 				</div>
 

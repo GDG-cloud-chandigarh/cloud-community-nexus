@@ -58,7 +58,7 @@ const Index = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <a
-                href="/register"
+                href="https://allevents.in/mohali/cloud-community-days-chandigarh-tickets/80002086552448"
                 className="w-full sm:w-36 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium text-black text-center transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 Register Now
@@ -248,7 +248,7 @@ const Index = () => {
             <p className="text-muted-foreground mt-2 text-sm md:text-base">Limited seats. Save your spot today.</p>
           </div>
           <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
-            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><a href="/register">Register Now</a></Button>
+            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><a href="https://allevents.in/mohali/cloud-community-days-chandigarh-tickets/80002086552448">Register Now</a></Button>
             <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><Link to="/about">Why attend?</Link></Button>
           </div>
         </div>
