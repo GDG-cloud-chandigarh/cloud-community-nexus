@@ -224,8 +224,8 @@ const Index = () => {
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.2062520807226!2d76.57060829678954!3d30.768790200000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb140bd63e07%3A0x68591e334d17a988!2sChandigarh%20University!5e0!3m2!1sen!2sin!4v1754969616756!5m2!1sen!2sin"
             loading="lazy"
-            allowfullscreen=""
-            referrerpolicy="no-referrer-when-downgrade"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
             className="w-full aspect-[16/9] md:aspect-[16/4]"
           />
         </article>
@@ -291,7 +291,9 @@ const Index = () => {
                 Get in touch
               </Link>
               <a
-                href="#sponsors"
+                href="https://drive.google.com/file/d/176ocWVYD28PlZTgIQBj5y54dJ7HsKVex/view?usp=sharing"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-full sm:w-32 h-10 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white story-link bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               >
                 Sponsorship

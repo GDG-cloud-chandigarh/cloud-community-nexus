@@ -46,10 +46,12 @@ export default function Contact() {
           <meta name="description" content="Contact the Cloud Community Days team for partnerships, volunteering, and general queries." />
           <link rel="canonical" href="/contact" />
         </Helmet>
-        <div className="max-w-xl mx-auto bg-card shadow-2xl p-8 border">
+        <div className="max-w-xl mx-auto bg-card shadow-2xl p-8 items-center justify-center bg-white border-2 border-black border-t-4 border-r-4">
           <h1 className="font-display text-4xl mb-4 text-center">Contact Us</h1>
           <p className="text-muted-foreground mb-8 text-center">
-            We'd love to hear from you! Fill out the form below and our team will get back to you soon.
+            We'd love to hear from you! 
+            <br/>
+            Fill out the form below and our team will get back to you soon.
           </p>
           <form ref={formRef} className="grid gap-6" onSubmit={onSubmit}>
             <div>
@@ -92,7 +94,7 @@ export default function Contact() {
               />
             </div>
             <button
-              className="h-12 px-6 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white"
+              className="h-12 px-6 flex items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white bg-gradient-to-r from-[hsl(var(--brand-blue))]/10 via-[hsl(var(--brand-green))]/10 to-[hsl(var(--brand-yellow))]/10"
               type="submit"
             >
               Send Message
