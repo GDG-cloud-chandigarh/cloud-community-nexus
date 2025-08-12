@@ -8,13 +8,13 @@ const schedule = [
   { time: "10:00 AM", title: "Keynote", speaker: "Cherish Santoshi" },
   {
     time: "10:30 AM",
-    title: "Whats New In Angular Google IO Updates",
-    speaker: "Pranav Kumar",
+    title: "Updating soon !...",
+    speaker: "Mohit Gulati",
   },
   {
     time: "11:20 AM",
-    title: "Dart on Cloud Run for Flutter developers to go full-stack!",
-    speaker: "Aditya Thakur",
+    title: "Updating soon !..",
+    speaker: "Sejal Dua",
   },
   {
     time: "12:10 PM",
@@ -24,17 +24,17 @@ const schedule = [
   { time: "12:30 PM", title: "Lunch Break" },
   {
     time: "2:00 PM",
-    title: "Optimizing Memory for Efficient GenAI Deployment",
+    title: "Updating Soon! ..",
     speaker: "Akash Chandra",
   },
   {
     time: "2:50 PM",
-    title: "Leverage Google Cloud to enable modern Data Analytics",
+    title: "Updating Soon! ..",
     speaker: "Nirav Kothari",
   },
   {
     time: "3:40 PM",
-    title: "Run and Scale your business with Google Cloud Run",
+    title: "Updating Soon! ..",
     speaker: "Gaurav Maadan",
   },
   { time: "4:30 PM", title: "Cultural Performance" },

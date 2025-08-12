@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const Index = () => {
   // Countdown logic
-  const targetDate = new Date("2025-08-23T00:00:00");
+  const targetDate = new Date("2025-08-30T00:00:00");
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Index = () => {
               The biggest, most exciting cloud community event of the year - focused on Cloud, DevOps, AI/ML, and developer networking.
             </p>
             <div className="flex flex-wrap gap-2 md:gap-3">
-              <span className="px-4 py-2 bg-black text-white text-xs md:text-base">Chandigarh • Sep 2025</span>
+              <span className="px-4 py-2 bg-black text-white text-xs md:text-base">Chandigarh • 30th Aug 2025</span>
               <span className="px-4 py-2 bg-black text-white text-xs md:text-base">In-person</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3">
@@ -94,19 +94,19 @@ const Index = () => {
         <div className="flex flex-wrap justify-center gap-6 md:gap-20 text-3xl md:text-7xl font-bold text-black">
           <div className="flex flex-col items-center">
             <span>{timeLeft.days}</span>
-            <span className="text-xs font-normal">Days</span>
+            <span className="text-sm font-normal">Days</span>
           </div>
           <div className="flex flex-col items-center">
             <span>{timeLeft.hours}</span>
-            <span className="text-xs font-normal">Hours</span>
+            <span className="text-sm font-normal">Hours</span>
           </div>
           <div className="flex flex-col items-center">
             <span>{timeLeft.mins}</span>
-            <span className="text-xs font-normal">Minutes</span>
+            <span className="text-sm font-normal">Minutes</span>
           </div>
           <div className="flex flex-col items-center">
             <span>{timeLeft.secs}</span>
-            <span className="text-xs font-normal">Seconds</span>
+            <span className="text-sm font-normal">Seconds</span>
           </div>
         </div>
       </section>
@@ -192,27 +192,36 @@ const Index = () => {
             </div>
           ))}
         </div>
-      </section>  
+      </section>
 
-      {/* Sponsors */}
-      <section id="sponsors" className="container pb-20 animate-fade-in">
-        <header className="mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-xl md:text-3xl">Sponsors & Partners</h2>
-            <p className="text-muted-foreground mt-2 text-sm md:text-base">Thanks to our amazing partners supporting the community.</p>
-          </div>
-          <Button asChild variant="outline" className="w-full md:w-auto"><Link to="/sponsors">Become a sponsor</Link></Button>
+      {/* Featured Topics */}
+      <section id="topics" className="container pb-20 animate-fade-in">
+        <header className="mb-8">
+          <h2 className="font-display text-xl md:text-3xl">Featured Topics</h2>
+          <p className="text-muted-foreground mt-2 text-sm md:text-base">Explore the latest in cloud, AI, web, and data at Cloud Community Days.</p>
         </header>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 items-center">
-          {[...Array(10)].map((_,i) => (
-            <div key={i} className="p-2 md:p-4 rounded-xl border bg-card flex items-center justify-center h-16 md:h-20 hover-scale">
-              <img src="/placeholder.svg" alt="Cloud Community Days sponsor logo" loading="lazy" className="h-8 md:h-10 w-auto opacity-70 animate-enter" />
+        <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-items-center">
+          {[
+            { name: "Google Cloud", logo: "/logos/gcp.png" },
+            { name: "Gemini API", logo: "/logos/gemini.png" },
+            { name: "Firebase", logo: "/logos/firebase.png" },
+            { name: "TensorFlow", logo: "/logos/tensorflow.png" },
+            { name: "Android", logo: "/logos/android.png" },
+            { name: "Angular", logo: "/logos/angular.png" },
+            { name: "Flutter", logo: "/logos/flutter.png" },
+            { name: "Makersuite", logo: "/logos/makersuite.png" },
+            { name: "Kuberenetes", logo: "/logos/kubernetes.png" },
+            { name: "AI/ML", logo: "/logos/ai-ml.png" },
+          ].map((topic, idx) => (
+            <div key={idx} className="flex flex-col items-center">
+              <div className="bg-white border-2 border-black border-t-4 border-r-4 shadow-soft p-4 flex flex-col items-center justify-center" style={{ width: '140px', height: '140px' }}>
+                <img src={topic.logo} alt={topic.name} className="max-h-12 max-w-full object-contain mb-2" />
+                <span className="text-xs md:text-sm text-center font-medium break-words leading-tight">{topic.name}</span>
+              </div>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Location */}
       <section id="location" className="container pb-20 animate-fade-in">
         <header className="mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
           <div>
