@@ -216,16 +216,16 @@ const Index = () => {
       <section id="location" className="container pb-20 animate-fade-in">
         <header className="mb-6 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
           <div>
-            <h2 className="font-display text-xl md:text-3xl">Location — CGC Jhanjeri</h2>
-            <p className="text-muted-foreground mt-2 text-sm md:text-base">Mohali, Punjab • Interactive map</p>
+            <h2 className="font-display text-xl md:text-3xl">Location — Chandigarh University</h2>
+            <p className="text-muted-foreground mt-2 text-sm md:text-base">Mamupur, Punjab • Interactive map</p>
           </div>
         </header>
         <article className="rounded-xl border bg-card overflow-hidden shadow-soft">
-          <iframe
-            title="CGC Jhanjeri on Google Maps"
-            src="https://www.google.com/maps?q=CGC%20Jhanjeri&z=15&output=embed"
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.2062520807226!2d76.57060829678954!3d30.768790200000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb140bd63e07%3A0x68591e334d17a988!2sChandigarh%20University!5e0!3m2!1sen!2sin!4v1754969616756!5m2!1sen!2sin"
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
             className="w-full aspect-[16/9] md:aspect-[16/4]"
           />
         </article>
