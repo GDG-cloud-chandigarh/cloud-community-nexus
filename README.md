@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# Cloud Community Days 2025 Chandigarh Website
 
-## Project info
+This is the official website for **Cloud Community Days 2025**, organized by [GDG Cloud Chandigarh](https://gdgcloudchd.in/). The site provides event details, agenda, speaker information, registration, gallery, and more for the region's premier community event focused on Cloud, DevOps, AI/ML, and developer technologies.
 
-**URL**: https://lovable.dev/projects/2d5e8d94-9f73-455e-ab32-472b0f093b2a
+## 🚀 Quick Start
 
-## How can I edit this code?
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Start development server:**
+   ```sh
+   npm run dev
+   ```
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+4. **Preview production build:**
+   ```sh
+   npm run preview
+   ```
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [shadcn/ui](https://ui.shadcn.com/) for UI components
+- [React Query](https://tanstack.com/query/latest) for data fetching
+- [React Router](https://reactrouter.com/) for routing
+- [EmailJS](https://www.emailjs.com/) for contact forms
+- [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/) for maps
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/2d5e8d94-9f73-455e-ab32-472b0f093b2a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📁 Project Structure
+```
+├── public/           # Static assets (images, logos, etc.)
+├── src/
+│   ├── components/   # Reusable UI and layout components
+│   ├── hooks/        # Custom React hooks
+│   ├── lib/          # Utility functions
+│   ├── pages/        # Route-based pages (Agenda, Speakers, etc.)
+│   ├── App.tsx       # Main app component
+│   └── main.tsx      # Entry point
+├── index.html        # HTML template
+├── tailwind.config.ts
+├── vite.config.ts
+├── package.json
+└── README.md
 ```
 
-**Edit a file directly in GitHub**
+## 🌐 Features
+- Event agenda, speakers, sponsors, and registration
+- Responsive design for all devices
+- Modern UI with shadcn/ui and Tailwind
+- Contact form with EmailJS integration
+- Interactive map (Mapbox)
+- SEO and social sharing meta tags
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Contributing
+Pull requests and suggestions are welcome! Please open an issue for major changes.
 
-**Use GitHub Codespaces**
+## 📄 License
+This project is licensed under the MIT License.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2d5e8d94-9f73-455e-ab32-472b0f093b2a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Made with ❤️ by GDG Cloud Chandigarh
