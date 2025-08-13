@@ -12,13 +12,13 @@ export default function Footer() {
           </p>
         </div>
         <div className="md:text-right flex md:justify-end items-center gap-4">
-          <a className="text-muted-foreground hover:text-foreground" href="#" aria-label="Twitter">
+          <a className="text-muted-foreground hover:text-foreground" href="https://x.com/GDGC_Chandigarh" aria-label="Twitter">
             <Twitter className="h-5 w-5" />
           </a>
-          <a className="text-muted-foreground hover:text-foreground" href="#" aria-label="LinkedIn">
+          <a className="text-muted-foreground hover:text-foreground" href="https://www.linkedin.com/showcase/community-groups-program-gdg/about/" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5" />
           </a>
-          <a className="text-muted-foreground hover:text-foreground" href="#" aria-label="GitHub">
+          <a className="text-muted-foreground hover:text-foreground" href="https://github.com/GDG-cloud-chandigarh" aria-label="GitHub">
             <Github className="h-5 w-5" />
           </a>
         </div>
