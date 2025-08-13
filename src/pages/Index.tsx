@@ -249,7 +249,7 @@ const Index = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-3 w-full md:w-auto">
             <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><a href="https://allevents.in/mohali/cloud-community-days-chandigarh-tickets/80002086552448">Register Now</a></Button>
-            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><a href="https://ccd.gdgcloudchandigarh.com/agenda">View Agenda</a></Button>
+            <Button asChild size="lg" className="flex text-black items-center justify-center bg-white border-2 border-black border-t-4 border-r-4 rounded-none font-medium transition hover:bg-black hover:text-white w-full md:w-auto"><Link to="/agenda">View Agenda</Link></Button>
           </div>
         </div>
       </section>
