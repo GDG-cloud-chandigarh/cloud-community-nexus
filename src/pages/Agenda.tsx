@@ -8,13 +8,11 @@ const schedule = [
   { time: "10:00 AM", title: "Keynote", speaker: "Cherish Santoshi" },
   {
     time: "10:30 AM",
-    title: "Updating soon !...",
-    speaker: "Mohit Gulati",
+    title: "TBD",
   },
   {
     time: "11:20 AM",
-    title: "Updating soon !..",
-    speaker: "Sejal Dua",
+    title: "TBD",
   },
   {
     time: "12:10 PM",
@@ -24,20 +22,17 @@ const schedule = [
   { time: "12:30 PM", title: "Lunch Break" },
   {
     time: "2:00 PM",
-    title: "Updating Soon! ..",
-    speaker: "Akash Chandra",
+    title: "TBD",
   },
   {
     time: "2:50 PM",
-    title: "Updating Soon! ..",
-    speaker: "Nirav Kothari",
+    title: "TBD",
   },
   {
     time: "3:40 PM",
-    title: "Updating Soon! ..",
-    speaker: "Gaurav Maadan",
+    title: "TBD",
   },
-  { time: "4:30 PM", title: "Cultural Performance" },
+  { time: "4:30 PM", title: "Cultural Performance/ Q&A" },
   { time: "5:00 PM", title: "Closing Remarks" },
 ];
 
