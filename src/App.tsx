@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react"
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Index from "./pages/Index";
@@ -41,6 +42,7 @@ const App = () => (
               </Routes>
             </main>
             <Footer />
+            <Analytics />
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
