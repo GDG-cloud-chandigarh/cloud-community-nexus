@@ -35,7 +35,7 @@ export default function Sponsors() {
           <h2 className="font-display text-2xl mb-4 text-center">Venue Partner</h2>
           <div className="flex flex-wrap gap-6 items-center justify-center">
             <div className="flex flex-col items-center">
-              <img src="/logos/cu-logo.png" alt="Chandigarh University" className="h-16 mb-2" />
+              <img src="/logos/cu-logo.png" alt="Chandigarh University" className="h-20 mb-2" />
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Sponsors() {
           <h2 className="font-display text-2xl mb-4 text-center">Ticketing Partner</h2>
           <div className="flex flex-wrap gap-6 items-center justify-center">
             <div className="flex flex-col items-center">
-              <img src="/logos/allevents.png" alt="allevents" className="h-12 mb-2" />
+              <img src="/logos/allevents.png" alt="allevents" className="h-20 mb-2" />
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function Sponsors() {
           <h2 className="font-display text-2xl mb-4 text-center">CFS Partner</h2>
           <div className="flex flex-wrap gap-6 items-center justify-center">
             <div className="flex flex-col items-center">
-              <img src="/logos/sessionize.jpg" alt="Sessionize" className="h-16 mb-2" />
+              <img src="/logos/sessionize.jpg" alt="Sessionize" className="h-20 mb-2" />
             </div>
           </div>
         </div>

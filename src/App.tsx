@@ -16,6 +16,7 @@ import Sponsors from "./pages/Sponsors";
 import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <ScrollToTop />
             <Header />
             <main>
               <Routes>
