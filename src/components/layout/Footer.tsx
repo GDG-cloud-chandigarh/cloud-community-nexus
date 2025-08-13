@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,6 +12,9 @@ export default function Footer() {
           </p>
         </div>
         <div className="md:text-right flex md:justify-end items-center gap-4">
+          <a className="text-muted-foreground hover:text-foreground" href="https://www.instagram.com/gdgc_chandigarh/" aria-label="Instagram">
+            <Instagram className="h-5 w-5" />
+          </a>
           <a className="text-muted-foreground hover:text-foreground" href="https://x.com/GDGC_Chandigarh" aria-label="Twitter">
             <Twitter className="h-5 w-5" />
           </a>
