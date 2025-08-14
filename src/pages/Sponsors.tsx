@@ -45,26 +45,17 @@ export default function Sponsors() {
           <h2 className="font-display text-2xl mb-4 text-center">Community Partners</h2>
           <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 justify-items-center">
             {[
-              // { img: "/logos/tfug-chandigarh.png" },
-              // { img: "/logos/gdg-jalandhar.png" },
-              // { img: "/logos/gdgcloudchd.png" },
-              // { img: "/logos/d4-community.png" },
-              // { img: "/logos/tfug-ghaziabad.png" },
-              // { img: "/logos/devlearn.png" },
-              // { img: "/logos/alexa-community.png" },
-              // { img: "/logos/girls-in-tech.png" },
-              // { img: "/logos/lamit-club.png" },
-              // { img: "/logos/cu-ieee.png" },
-              // { img: "/logos/innovation-mission-punjab.png" },
-              // { img: "/logos/c-square.png" },
-              // { img: "/logos/ads-labs.png" },
-              // { img: "/logos/campus-community.png" },
-              // { img: "/logos/spectrum-club.png" },
-              // { img: "/logos/bugbaar.png" },
-              // { img: "/logos/gdgoc-community.png" },
+              { img: "/logos/osc.png" },
+              { img: "/logos/devlearn.png" },
+              { img: "/logos/gdgchd.png" },
+              // more logos...
             ].map((partner, i) => (
               <div key={i} className="flex flex-col items-center">
-                <img src={partner.img} alt="Community Partner Logo" className="h-12 mb-2" />
+                <img
+                  src={partner.img}
+                  alt="Community Partner Logo"
+                  className="mb-2 h-16 mx-auto"
+                />
               </div>
             ))}
           </div>

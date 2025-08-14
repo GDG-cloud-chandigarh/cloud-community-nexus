@@ -70,7 +70,7 @@ const Index = () => {
                 View Agenda
               </Link>
             </div>
-            <div className="flex flex-wrap gap-4 pt-2 text-muted-foreground justify-center">
+            <div className="flex flex-wrap gap-4 pt-2 text-muted-foreground justify-center lg:justify-start">
               <div className="flex items-center gap-2"><Cloud /><span>Cloud</span></div>
               <div className="flex items-center gap-2"><Cpu /><span>AI/ML</span></div>
               <div className="flex items-center gap-2"><GitBranch /><span>DevOps</span></div>
@@ -314,7 +314,7 @@ const Index = () => {
             <img
               src="/images/contactus.png"
               alt="Cloud Community Days Chandigarh"
-              className="rounded-xl border shadow-soft w-full max-w-xs md:max-w-md object-cover"
+              className="rounded-xl w-full max-w-xs md:max-w-md object-cover"
               loading="lazy"
             />
           </div>
