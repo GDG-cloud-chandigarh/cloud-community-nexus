@@ -211,7 +211,7 @@ const Index = () => {
             { name: "Flutter", logo: "/logos/flutter.png" },
             { name: "Makersuite", logo: "/logos/makersuite.png" },
             { name: "Kuberenetes", logo: "/logos/kubernetes.png" },
-            { name: "AI/ML", logo: "/logos/ai-ml.png" },
+            { name: "AI/ML", logo: "/logos/ml.png" },
           ].map((topic, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <div className="bg-white border-2 border-black border-t-4 border-r-4 shadow-soft p-4 flex flex-col items-center justify-center" style={{ width: '140px', height: '140px' }}>
