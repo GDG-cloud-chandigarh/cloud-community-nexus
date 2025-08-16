@@ -18,6 +18,7 @@ import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import Team from "./pages/Team";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
                 <Route path="/agenda" element={<Agenda />} />
                 <Route path="/speakers" element={<Speakers />} />
                 <Route path="/sponsors" element={<Sponsors />} />
+                <Route path="/team" element={<Team />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />

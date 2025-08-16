@@ -7,6 +7,7 @@ const navItems = [
 	{ label: "Agenda", to: "/agenda" },
 	{ label: "Speakers", to: "/speakers" },
 	{ label: "Sponsors", to: "/sponsors" },
+	{ label: "Teams", to: "/team" },
 	{ label: "Gallery", to: "/gallery" },
 	{ label: "Contact", to: "/contact" },
 ];
