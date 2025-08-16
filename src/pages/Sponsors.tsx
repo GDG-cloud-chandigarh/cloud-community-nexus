@@ -35,7 +35,7 @@ export default function Sponsors() {
           <h2 className="font-display text-2xl mb-4 text-center">Venue Partner</h2>
           <div className="flex flex-wrap gap-6 items-center justify-center">
             <div className="flex flex-col items-center">
-              <img src="/logos/cu-logo.png" alt="Chandigarh University" className="h-20 mb-2" />
+              <img src="/logos/cu-logo.png" alt="Chandigarh University" className="h-20 my-6" />
             </div>
           </div>
         </div>
@@ -43,21 +43,25 @@ export default function Sponsors() {
         {/* Community Partners */}
         <div className="mb-10">
           <h2 className="font-display text-2xl mb-4 text-center">Community Partners</h2>
-          <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 justify-items-center">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 justify-items-center">
             {[
               { img: "/logos/osc.png" },
               { img: "/logos/devlearn.png" },
               { img: "/logos/gdgchd.png" },
               { img: "/logos/gdgjld.png" },
-              { img: "/logos/mlchd.png" },
+              { img: "/logos/ml.png" },
               { img: "/logos/gfgcu.png" },
+              { img: "/logos/alexa.png" },
+              { img: "/logos/cs.png" },
+              { img: "/logos/ctsoc.png" },
+              { img: "/logos/csquare.png" },
               // more logos...
             ].map((partner, i) => (
               <div key={i} className="flex flex-col items-center">
                 <img
                   src={partner.img}
                   alt="Community Partner Logo"
-                  className="mb-2 h-16 mx-auto"
+                  className="mb-2 w-32 h-32 lg:w-48 lg:h-48 object-contain"
                 />
               </div>
             ))}
