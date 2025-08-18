@@ -47,10 +47,17 @@ export default function Agenda() {
         />
         <link rel="canonical" href="/agenda" />
       </Helmet>
+      {/* Desktop/Laptop header image */}
       <img
         src="/images/header.png"
         alt="Cloud Community Days 2025 Logo"
-        className="w-full mb-6 object-contain rounded-xl shadow"
+        className="w-full mb-6 object-contain rounded-xl shadow hidden sm:block"
+      />
+      {/* Mobile header image */}
+      <img
+        src="/images/mobile_header.png"
+        alt="Cloud Community Days 2025 Mobile Logo"
+        className="w-full object-contain block sm:hidden"
       />
       <section className="container py-8 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

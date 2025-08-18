@@ -4,10 +4,17 @@ import { Button } from "@/components/ui/button";
 export default function Sponsors() {
   return (
     <>
+      {/* Desktop/Laptop header image */}
       <img
         src="/images/header.png"
         alt="Cloud Community Days 2025 Logo"
-        className="w-full mb-6 object-contain"
+        className="w-full mb-6 object-contain hidden sm:block"
+      />
+      {/* Mobile header image */}
+      <img
+        src="/images/mobile_header.png"
+        alt="Cloud Community Days 2025 Mobile Logo"
+        className="w-full object-contain block sm:hidden"
       />
       <section className="container py-16">
         <Helmet>

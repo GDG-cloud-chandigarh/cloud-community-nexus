@@ -14,7 +14,6 @@ import NotFound from "./pages/NotFound";
 import Agenda from "./pages/Agenda";
 import Speakers from "./pages/Speakers";
 import Sponsors from "./pages/Sponsors";
-import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
@@ -39,7 +38,6 @@ const App = () => (
                 <Route path="/speakers" element={<Speakers />} />
                 <Route path="/sponsors" element={<Sponsors />} />
                 <Route path="/team" element={<Team />} />
-                <Route path="/register" element={<Register />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
