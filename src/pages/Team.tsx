@@ -20,29 +20,29 @@ const teamMembers = [
 
 const volunteers = [
   {
-    name: "Rahul Verma",
+    name: "Purahan Gupta",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/purahan.JPG",
   },
   {
-    name: "Simran Kaur",
+    name: "Jashan Bansal",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/jashan.jpg",
   },
   {
-    name: "Rahul Verma",
+    name: "Manmohan Singh",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/.manmohanjpeg",
   },
   {
-    name: "Simran Kaur",
+    name: "Manik",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/manik.jpeg",
   },
   {
-    name: "Simran Kaur",
+    name: "Mohit",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/mohit.jpeg",
   },
   {
     name: "Simran Kaur",
