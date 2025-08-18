@@ -32,7 +32,7 @@ const volunteers = [
   {
     name: "Manmohan Singh",
     role: "Volunteer",
-    photo: "/pfp/.manmohanjpeg",
+    photo: "/pfp/manmohan.jpeg",
   },
   {
     name: "Manik",
