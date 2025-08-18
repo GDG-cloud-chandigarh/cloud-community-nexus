@@ -40,14 +40,14 @@ const volunteers = [
     photo: "/pfp/manik.jpeg",
   },
   {
-    name: "Mohit",
+    name: "Shatakshi Bhardwaj",
     role: "Volunteer",
-    photo: "/pfp/mohit.jpeg",
+    photo: "/pfp/shatakshi.jpeg",
   },
   {
-    name: "Simran Kaur",
+    name: "Harsh",
     role: "Volunteer",
-    photo: "/pfp/.jpeg",
+    photo: "/pfp/harsh.jpeg",
   },
   // Add more volunteers here
 ];
