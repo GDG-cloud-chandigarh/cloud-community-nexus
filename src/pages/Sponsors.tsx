@@ -55,6 +55,8 @@ export default function Sponsors() {
               { img: "/logos/cs.png" },
               { img: "/logos/ctsoc.png" },
               { img: "/logos/csquare.png" },
+              { img: "/logos/D4.png" },
+              { img: "/logos/iste.png" },
               // more logos...
             ].map((partner, i) => (
               <div key={i} className="flex flex-col items-center">
