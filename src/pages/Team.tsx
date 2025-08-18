@@ -47,7 +47,7 @@ const volunteers = [
   {
     name: "Harsh",
     role: "Volunteer",
-    photo: "/pfp/harsh.jpeg",
+    photo: "/pfp/harsh.jpg",
   },
   // Add more volunteers here
 ];
