@@ -23,31 +23,43 @@ const volunteers = [
     name: "Purahan Gupta",
     role: "Volunteer",
     photo: "/pfp/purahan.JPG",
+    linkedin: "https://www.linkedin.com/in/purahan/",
   },
   {
     name: "Jashan Bansal",
     role: "Volunteer",
     photo: "/pfp/jashan.jpg",
+    linkedin: "https://www.linkedin.com/in/jashan-bansal-02309b317/",
   },
   {
     name: "Manmohan Singh",
     role: "Volunteer",
     photo: "/pfp/manmohan.jpeg",
+    linkedin: "https://www.linkedin.com/in/manmohan197814/",
   },
   {
     name: "Manik",
     role: "Volunteer",
     photo: "/pfp/manik.jpeg",
+    linkedin: "https://www.linkedin.com/in/mrmanik/",
   },
   {
     name: "Shatakshi Bhardwaj",
     role: "Volunteer",
     photo: "/pfp/shatakshi.jpeg",
+    linkedin: "https://www.linkedin.com/in/shatakshi-bhardwaj-445295281/",
   },
   {
-    name: "Harsh",
+    name: "Harsh Chopra",
     role: "Volunteer",
     photo: "/pfp/harsh.jpg",
+    linkedin: "https://www.linkedin.com/in/harshchopra79/",
+  },
+  {
+    name: "Krishanu Mishra",
+    role: "Volunteer",
+    photo: "/pfp/krishanu.jpg",
+    linkedin: "https://www.linkedin.com/in/krishanu-mishra-aa531b276/",
   },
   // Add more volunteers here
 ];
@@ -118,6 +130,16 @@ export default function Team() {
                 </Avatar>
                 <div className="font-semibold">{vol.name}</div>
                 <div className="text-muted-foreground text-sm">{vol.role}</div>
+                {vol.linkedin && (
+                  <a
+                    href={vol.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 flex items-center gap-2 text-blue-600 hover:underline text-xs justify-center"
+                  >
+                    <img src="/logos/linkedin.svg" alt="LinkedIn" className="h-5 w-5" />
+                  </a>
+                )}
               </Card>
             ))}
           </div>
