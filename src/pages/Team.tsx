@@ -44,7 +44,7 @@ const volunteers = [
     linkedin: "https://www.linkedin.com/in/mrmanik/",
   },
   {
-    name: "Shatakshi Bhardwaj",
+    name: "Shatakshi",
     role: "Volunteer",
     photo: "/pfp/shatakshi.jpeg",
     linkedin: "https://www.linkedin.com/in/shatakshi-bhardwaj-445295281/",
