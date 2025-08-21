@@ -44,6 +44,7 @@ const schedule = [
   {
     time: "3:20 PM",
     title: "Quiz / Competition",
+    speaker: "GDG Cloud Chandigarh Team",
   },
   { time: "3:50 PM", title: "Facilitation Ceremony" },
   { time: "4:20 PM", title: "Group Picture" },
