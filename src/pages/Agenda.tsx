@@ -4,36 +4,50 @@ import { Button } from "@/components/ui/button";
 
 const schedule = [
   { time: "09:00 AM", title: "Reporting Starts" },
-  { time: "09:45 AM", title: "Opening remarks" },
-  { time: "10:00 AM", title: "Keynote", speaker: "Cherish Santoshi" },
+  { time: "10:00 AM", title: "Opening remarks" },
+  { time: "10:10 AM", title: "Keynote", speaker: "Cherish Santoshi" },
   {
     time: "10:30 AM",
     title: "TBD",
+    speaker: "Mohit Gulati",
   },
   {
-    time: "11:20 AM",
+    time: "11:05 AM",
     title: "TBD",
+    speaker: "Sejal Sud",
   },
   {
-    time: "12:10 PM",
-    title: "Content Contest",
-    speaker: "GDG Cloud Chandigarh Team",
-  },
-  { time: "12:30 PM", title: "Lunch Break" },
-  {
-    time: "2:00 PM",
+    time: "11:40 AM",
     title: "TBD",
+    speaker: "Abhishek Doshi",
   },
   {
-    time: "2:50 PM",
+    time: "12:20 AM",
     title: "TBD",
+    speaker: "Rishiraj Acharya",
+  },
+  // {
+  //   time: "12:10 PM",
+  //   title: "Content Contest",
+  //   speaker: "GDG Cloud Chandigarh Team",
+  // },
+  { time: "12:55 PM", title: "Lunch Break" },
+  {
+    time: "1:55 PM",
+    title: "TBD",
+    speaker: "Gaurav Kheterpal",
   },
   {
-    time: "3:40 PM",
-    title: "TBD",
+    time: "2:35 PM",
+    title: "Panel Discussion",
   },
-  { time: "4:30 PM", title: "Cultural Performance/ Q&A" },
-  { time: "5:00 PM", title: "Closing Remarks" },
+  {
+    time: "3:20 PM",
+    title: "Quiz / Competition",
+  },
+  { time: "3:50 PM", title: "Facilitation Ceremony" },
+  { time: "4:20 PM", title: "Group Picture" },
+  { time: "4:50 PM", title: "Swag Distribution & Networking" },
 ];
 
 export default function Agenda() {
