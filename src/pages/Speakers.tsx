@@ -30,8 +30,8 @@ const speakers = [
     title: "Senior Software Engineer",
     company: "Qvin",
     photo: "/pfp/abhishek.jpeg",
-    linkedin: "https://www.linkedin.com/in/gauravkheterpal/",
-    twitter: "https://x.com/gauravkheterpal",
+    linkedin: "https://www.linkedin.com/in/abhishekdoshi26/",
+    twitter: "https://x.com/AbhishekDoshi26",
   },
   {
     name: "Rishiraj Acharya",
