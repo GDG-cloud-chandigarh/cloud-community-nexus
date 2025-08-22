@@ -50,7 +50,7 @@ export default function Sponsors() {
         {/* Community Partners */}
         <div className="mb-10">
           <h2 className="font-display text-2xl mb-4 text-center">Community Partners</h2>
-          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 justify-items-center">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 items-center justify-items-center">
             {[
               { img: "/logos/osc.png" },
               { img: "/logos/devlearn.png" },
