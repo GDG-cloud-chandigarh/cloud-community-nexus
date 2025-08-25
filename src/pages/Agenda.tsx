@@ -22,9 +22,9 @@ const schedule = [
     speaker: "Abhishek Doshi",
   },
   {
-    time: "12:20 AM",
-    title: "Finetuning Gemma 3 with Synthetic Dataset in Kaggle via HF Sheets",
-    speaker: "Rishiraj Acharya",
+    time: "12:20 PM",
+    title: "Serverless AI Agents with Google ADK and Cloud Run",
+    speaker: "Anubhav Singh",
   },
   // {
   //   time: "12:10 PM",
