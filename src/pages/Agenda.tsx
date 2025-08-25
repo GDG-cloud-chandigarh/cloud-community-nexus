@@ -8,22 +8,22 @@ const schedule = [
   { time: "10:10 AM", title: "Keynote", speaker: "Cherish Santoshi" },
   {
     time: "10:30 AM",
-    title: "TBD",
+    title: "Vibe Coding for non coders",
     speaker: "Mohit Gulati",
   },
   {
     time: "11:05 AM",
-    title: "TBD",
+    title: "Using social media to find opportunities",
     speaker: "Sejal Sud",
   },
   {
     time: "11:40 AM",
-    title: "TBD",
+    title: "Firebase Studio - Your ultimate product development toolkit",
     speaker: "Abhishek Doshi",
   },
   {
     time: "12:20 AM",
-    title: "TBD",
+    title: "Finetuning Gemma 3 with Synthetic Dataset in Kaggle via HF Sheets",
     speaker: "Rishiraj Acharya",
   },
   // {
@@ -34,7 +34,7 @@ const schedule = [
   { time: "12:55 PM", title: "Lunch Break" },
   {
     time: "1:55 PM",
-    title: "TBD",
+    title: "Building Multi-Agent Systems with Google A2A & ADK",
     speaker: "Gaurav Kheterpal",
   },
   {
