@@ -8,7 +8,7 @@ const schedule = [
   { time: "10:10 AM", title: "Keynote", speaker: "Cherish Santoshi" },
   {
     time: "10:30 AM",
-    title: "Vibe Coding for non coders",
+    title: "Unlock AI anywhere with Google Distributed Cloud",
     speaker: "Mohit Gulati",
   },
   {
