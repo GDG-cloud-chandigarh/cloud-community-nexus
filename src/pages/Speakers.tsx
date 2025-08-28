@@ -34,19 +34,12 @@ const speakers = [
     twitter: "https://x.com/AbhishekDoshi26",
   },
   {
-    name: "Rishiraj Acharya",
-    title: "ML Engineer",
-    company: "IntelliTek.ai",
-    photo: "/pfp/rishiraj.jpeg",
-    linkedin: "https://linkedin.com/in/rishirajacharya",
-    twitter: "https://x.com/rishirajacharya",
-  },
-  {
-    name: "Dhaval Kaku",
-    title: "Program Curation Manager",
-    company: "Innovation Mission Punjab",
-    photo: "/pfp/dhaval.jpeg",
-    linkedin: "https://www.linkedin.com/in/dhavalkaku/",
+    name: "Anubhav Singh",
+    title: "AI Engineer",
+    company: "Weights & Biases",
+    photo: "/pfp/anubhav.jpg",
+    linkedin: "https://linkedin.com/in/xprilion",
+    twitter: "https://x.com/xprilion",
   },
 ];
 
